@@ -1,0 +1,7 @@
+.home-layout-links > a {
+    text-decoration: none;
+    color: cornflowerblue;
+    margin-left: 30px;
+    /* background-color: brown; */
+    font-size: 24px;
+}

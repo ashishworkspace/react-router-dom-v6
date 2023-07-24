@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import RootLayout from './Layout/RootLayout'
 import About from './pages/About'
 import Colors from './pages/Colors'
@@ -17,7 +17,7 @@ const App = () => {
                 <Route path="/" element={<RootLayout />}>
                     <Route index element={<Home />} />
                     <Route path="home" element={<HomeLayout />}>
-                        <Route index element={<Dashboard />} />
+                        <Route index element={<Navigate to="dashboard" replace />} />
                         <Route path="dashboard" element={<Dashboard />} />
                         <Route path="review" element={<Reviews />} />
                         <Route path="colors" element={<HomeColor />} />
